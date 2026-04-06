@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gents Formal Collection</title>
+    <style>
+        /* CSS resets and general styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f7f7f7;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Container for the grid - Centers the cards on the page */
+        .collection-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            width: 100%;
+            max-width: 1400px; /* Optional: Sets a max width for the grid */
+            margin-top: 20px;
+        }
+
+        /* Individual Product Card Styling */
+        .product-card {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 400px; /* Fixed height for image consistency */
+            object-fit: cover; /* Ensures image covers the area without distortion */
+            display: block;
+        }
+
+        .product-details {
+            padding: 20px;
+            flex-grow: 1; /* Pushes the button to the bottom */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-code {
+            font-size: 11px;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .product-title {
+            font-size: 20px;
+            margin: 0 0 10px 0;
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        .price {
+            font-size: 19px;
+            font-weight: bold;
+            color: #b59410; /* Luxury gold tone */
+            margin-bottom: 15px;
+        }
+
+        .description {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 15px;
+            flex-grow: 1; /* Ensures text takes available space */
+        }
+
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 12px;
+            margin-bottom: 15px;
+        }
+
+        .specs-table td {
+            padding: 6px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .label {
+            font-weight: bold;
+            color: #444;
+            width: 35%;
+        }
+
+        .buy-button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 14px;
+            transition: background 0.3s;
+            box-sizing: border-box; /* Crucial for correct padding */
+        }
+
+        .buy-button:hover {
+            background-color: #333;
+        }
+
+        /* Responsive adjustments for mobile */
+        @media (max-width: 600px) {
+            .collection-grid {
+                grid-template-columns: 1fr; /* Single column on small screens */
+            }
+            .product-image {
+                height: 300px; /* Adjust image height for mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<h1>Midnight Collection</h1>
+<p>Premium formalwear curated for distinction. Prices range from R4 000 to R6 000.</p>
+
+<div class="collection-grid">
+
+    <div class="product-card">
+        <img src="image1.jpg" alt="Vintage Gold Brocade Suit" class="product-image">
+        <div class="product-details">
+            <div class="product-code">Code: GOLDSUIT-01</div>
+            <h2 class="product-title">Vintage Gold Brocade Tux</h2>
+            <div class="price">R1 600</div>
+            <p class="description">
+                A statement piece. Featuring a heavy gold and black vintage brocade pattern, contrasting velvet lapels, and an included crown brooch with chain detail.
+            </p>
+            <table class="specs-table">
+                <tr><td class="label">Color:</td><td>Black & Antique Gold</td></tr>
+                <tr><td class="label">Includes:</td><td>Jacket, Waistcoat, Brooch</td></tr>
+            </table>
+            <a href="#" class="buy-button">ADD TO CART</a>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <img src="image2.jpg" alt="Artisan Paisley Dinner Jacket" class="product-image">
+        <div class="product-details">
+            <div class="product-code">Code: PAISLEY-02</div>
+            <h2 class="product-title">Artisan Paisley Dinner Jacket</h2>
+            <div class="price">R2 850</div>
+            <p class="description">
+                Elevated texture. This jacket showcases intricate embossed paisley work. Dark green/black hues are offset by deep velvet shaw lapels and a unique elephant brooch.
+            </p>
+            <table class="specs-table">
+                <tr><td class="label">Color:</td><td>Dark Emerald/Black</td></tr>
+                <tr><td class="label">Includes:</td><td>Jacket, Waistcoat, Brooch</td></tr>
+            </table>
+            <a href="#" class="buy-button">ADD TO CART</a>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <img src="image3.jpg" alt="High Contrast Royal Blue Suit" class="product-image">
+        <div class="product-details">
+            <div class="product-code">Code: ROYALNVY-03</div>
+            <h2 class="product-title">Royal Blue & Ivory Contrast</h2>
+            <div class="price">R2 300</div>
+            <p class="description">
+                A modern classic. Royal blue jacket with black satin lapels, featuring a contrasting ivory double-breasted waistcoat for a high-impact formal appearance.
+            </p>
+            <table class="specs-table">
+                <tr><td class="label">Color:</td><td>Royal Navy & Ivory</td></tr>
+                <tr><td class="label">Includes:</td><td>Jacket, DB Waistcoat, Bow Tie</td></tr>
+            </table>
+            <a href="#" class="buy-button">ADD TO CART</a>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <img src="image4.jpg" alt="Polished Navy Shawl Tuxedo" class="product-image">
+        <div class="product-details">
+            <div class="product-code">Code: NVYSHWL-04</div>
+            <h2 class="product-title">Polished Navy Shawl Tuxedo</h2>
+            <div class="price">R2 100</div>
+            <p class="description">
+                Timeless sophistication. A sleek, minimalist navy tuxedo defined by smooth black satin shawl lapels and subtle pocket trim. A wedding-day favorite.
+            </p>
+            <table class="specs-table">
+                <tr><td class="label">Color:</td><td>Navy & Black Satin</td></tr>
+                <tr><td class="label">Includes:</td><td>Jacket, Black Bow Tie</td></tr>
+            </table>
+            <a href="#" class="buy-button">ADD TO CART</a>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <img src="image5.jpg" alt="Classic Navy 3-Piece" class="product-image">
+        <div class="product-details">
+            <div class="product-code">Code: CLASSIC-05</div>
+            <h2 class="product-title">Classic Navy 3-Piece</h2>
+            <div class="price">R1 600</div>
+            <p class="description">
+                The cornerstone of business formal. A well-tailored, classic navy suit with a single-breasted waistcoat and sharp notch lapels. Simple, reliable, elegant.
+            </p>
+            <table class="specs-table">
+                <tr><td class="label">Color:</td><td>Solid Navy</td></tr>
+                <tr><td class="label">Includes:</td><td>Jacket, Waistcoat, Lapel Chain</td></tr>
+            </table>
+            <a href="#" class="buy-button">ADD TO CART</a>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <img src="image6.jpg" alt="Textured Charcoal Plaid Suit" class="product-image">
+        <div class="product-details">
+            <div class="product-code">Code: GRYPLD-06</div>
+            <h2 class="product-title">Charcoal Plaid 3-Piece</h2>
+            <div class="price">R1 500</div>
+            <p class="description">
+                Bespoke character. A textured grey plaid jacket with contrasting solid black peak lapels, complete with a contrasting black waistcoat and detailed chain.
+            </p>
+            <table class="specs-table">
+                <tr><td class="label">Color:</td><td>Charcoal Plaid & Black</td></tr>
+                <tr><td class="label">Includes:</td><td>Jacket, Waistcoat, Chain</td></tr>
+            </table>
+            <a href="#" class="buy-button">ADD TO CART</a>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <img src="image7.jpg" alt="Dapper Grey & Navy Duo" class="product-image">
+        <div class="product-details">
+            <div class="product-code">Code: GRYNVY-07</div>
+            <h2 class="product-title">Dapper Grey & Navy Ensemble</h2>
+            <div class="price">R1 800</div>
+            <p class="description">
+                A powerful contrast. A sharp grey jacket paired with a navy double-breasted waistcoat featuring gold buttons, and a matching patterned tie/pocket square.
+            </p>
+            <table class="specs-table">
+                <tr><td class="label">Color:</td><td>Grey & Navy</td></tr>
+                <tr><td class="label">Includes:</td><td>Jacket, DB Waistcoat, Tie Set</td></tr>
+            </table>
+            <a href="#" class="buy-button">ADD TO CART</a>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <img src="image8.jpg" alt="Modern Cobalt Peak Tux" class="product-image">
+        <div class="product-details">
+            <div class="product-code">Code: CBLTPEAK-08</div>
+            <h2 class="product-title">Cobalt Peak Lapel Tuxedo</h2>
+            <div class="price">R900</div>
+            <p class="description">
+                The ultimate showstopper. A vibrant cobalt blue suit defined by dramatic wide black peak lapels and a matching double-breasted waistcoat. Includes ornate dual brooches.
+            </p>
+            <table class="specs-table">
+                <tr><td class="label">Color:</td><td>Cobalt Blue & Black</td></tr>
+                <tr><td class="label">Includes:</td><td>Jacket, Waistcoat, Brooches</td></tr>
+            </table>
+            <a href="#" class="buy-button">ADD TO CART</a>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <img src="image9.jpg" alt="Bespoke Black Embroidered Suit" class="product-image">
+        <div class="product-details">
+            <div class="product-code">Code: BLK-EMB-001</div>
+            <h2 class="product-title">Midnight Artisan 3-Piece</h2>
+            <div class="price">R1 500</div>
+            <p class="description">
+                The starting benchmark. A premium three-piece tuxedo featuring handcrafted beadwork on the shoulder and lapels. Perfect for high-profile formal events.
+            </p>
+            <table class="specs-table">
+                <tr><td class="label">Color:</td><td>Deep Onyx Black</td></tr>
+                <tr><td class="label">Includes:</td><td>Jacket, Waistcoat, Bow Tie</td></tr>
+            </table>
+            <a href="#" class="buy-button">ADD TO CART</a>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <img src="image10.jpg" alt="Premium Onyx Dinner Suit" class="product-image">
+        <div class="product-details">
+            <div class="product-code">Code: ONYX-10</div>
+            <h2 class="product-title">Premium Onyx Dinner Suit</h2>
+            <div class="price">R1600</div>
+            <p class="description">
+                A masterclass in subtlety. This deep black suit focuses on texture, featuring a subtle micro-dot pattern and impeccable tailoring for a sharp, modern silhouette.
+            </p>
+            <table class="specs-table">
+                <tr><td class="label">Color:</td><td>Textured Black</td></tr>
+                <tr><td class="label">Includes:</td><td>Jacket, Waistcoat</td></tr>
+            </table>
+            <a href="#" class="buy-button">ADD TO CART</a>
+        </div>
+    </div>
+
+</div> </body>
+</html>

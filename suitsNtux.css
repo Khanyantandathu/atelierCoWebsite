@@ -1,0 +1,149 @@
+/*General Page Styling*/
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 40px 20px;
+    background-color: #000000;
+    background-image: url('html.png.jpeg');
+    background-size: cover;
+    background-position: center;
+    color: #d4af37;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+header p {
+    font-size: 18px;
+    color: #000000;
+}
+
+/*Grid layout*/
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*Card styling*/
+.product-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+    width: 50%;
+    height: auto;
+    display: block;
+}
+
+.product-details {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-code {
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #c5a021;
+    letter-spacing: 1px;
+}
+
+.product-title {
+    font-size: 20px;
+    margin: 10px 0;
+    color: #111;
+}
+
+.price {
+    font-size: 22px;
+    font-weight: bold;
+    color: #c5a021 ;
+    margin-bottom: 15px;
+}
+
+.description {
+    font-size: 14px;
+    color: #070606ef;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.specs-table {
+    width: 100%;
+    font-size: 13px;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.specs-table td {
+    padding: 8px 0;
+    border: 1px solid #000000;
+}
+
+.label {
+    font-weight: bold;
+    width: 40%;
+}
+
+/*Button Styling*/
+.select-button {
+    text-align: center;
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 6px;
+    font-weight: bold;
+    margin-top: auto;
+    transition: background 0.3s ease;
+}
+
+.select-button:hover {
+    background: black;
+    color: gold;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .collection-grid {
+        grid-template-columns: 1fr;
+    }
+    .product-image {
+        height: 350px;
+    }
+}
+
+a:link,
+a:visited {
+    color:#eee; 
+    text-decoration: none;
+}
+a:hover {
+    color: gold;
+
+}
+a:active {
+    color: #c5a021;
+}

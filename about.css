@@ -1,0 +1,120 @@
+/*:root {
+--bg-color: black;
+---text-color:gold ;
+}*/
+
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+}
+
+.about-us-section {
+    position: relative;
+    overflow: hidden;/* prevents blur from spiling out*/
+    padding: 40px;
+    color: white;
+}
+
+/* blurred background image*/
+.about-us-section::before {
+    content:"";
+    position:absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    background-image:url(html.png.jpeg);
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px);/*<-- the blur effect*/
+    z-index:-1 ;/* move behind the content*/
+    transform: scale(1.1);/*fixes blur edges*/
+
+}
+
+.about-flex {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.about-flex img {
+    width: 300px;
+    height: auto;
+    margin-left: 20px;
+}
+
+.about-flex p {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.lists-container {
+    display: flex;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.list-section {
+    flex: 1;
+}
+
+.list-section:last-child {
+    margin-left: 50px;
+}
+
+.list-section h2 {
+    color: gold;
+    margin-bottom: 10px;
+}
+
+.list-section ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.list-section li {
+    margin-bottom: 10px;
+}
+
+.about-us-section header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.about-us-section h1 {
+    color: gold;
+    font-size: 2rem;
+}
+
+.back-btn {
+    background-color: black;
+    color: gold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.back-btn:hover {
+    background-color:black ;
+    color: gold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition:background-color 0.3s;
+}
+
+.back-btn:hover {
+    background-color: #333;
+}
+

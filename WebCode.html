@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Atelier Co.</title>
+    <style>
+        :root {
+            /* Colors sampled from the sunset and the car */
+            --primary-bg: #0a0a0a; 
+            --gold-accent: #d4af37; 
+            --sunset-orange: #ff8c42;
+            --white: #ffffff;
+            --glass: rgba(0, 0, 0, 0.7);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--primary-bg);
+            color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 70vh; /* Slightly increased height to showcase the dress detail */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* Updated to use your uploaded image */
+            background: linear-gradient(to bottom, rgba(10,10,10,0.2), var(--primary-bg)), 
+                        url('@shliyahh.webp') no-repeat center center/cover;
+            border-bottom: 2px solid var(--gold-accent);
+        }
+
+        .hero-overlay {
+            text-align: center;
+            background: var(--glass);
+            padding: 2rem;
+            border-radius: 8px;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--gold-accent);
+            text-transform: uppercase;
+            letter-spacing: 4px;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1000px;
+            margin: -50px auto 50px;
+            padding: 40px;
+            background: var(--primary-bg);
+            position: relative;
+            z-index: 2;
+        }
+
+        h2 {
+            color: var(--sunset-orange);
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            color: #ccc;
+        }
+
+        .highlight {
+            color: var(--gold-accent);
+            font-weight: bold;
+        }
+
+        /* Why Choose Us Section */
+        .features {
+            margin-top: 40px;
+            padding: 30px;
+            border-left: 4px solid var(--gold-accent);
+            background: rgba(255, 140, 66, 0.05);
+        }
+
+        .features h3 {
+            color: var(--gold-accent);
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        li strong {
+            color: var(--sunset-orange);
+            display: block;
+            font-size: 1.2rem;
+        }
+
+        /* Decoration Footer */
+        .footer-line {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold-accent), transparent);
+            margin: 50px 0;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .container { padding: 20px; margin-top: 0; }
+            .hero { height: 60vh; }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <div class="hero-overlay">
+            <h1>Welcome to the <br><span style="color: var(--white);">Atelier Co.</span> Experience</h1>
+        </div>
+    </section>
+
+    <main class="container">
+        <h2>Our Mission</h2>
+        <p>At <span class="highlight">Atelier Co.</span>, we believe that your Matric dance shouldn't just be an event—it should be a masterpiece. We know that the journey to the "perfect night" is often cluttered with endless bookings, high price tags, and logistical headaches.</p>
+        
+        <p>That’s why we’ve curated an all-in-one destination designed to bring your dream aesthetic to life without the premium stress. From the sharpest tailored suits and breathtaking gowns to professional cosmetology and head-turning luxury arrivals, we handle the details so you can focus on the memories.</p>
+
+        <p>We aren't just a booking platform; we are your ultimate red-carpet partner. By bridging the gap between high-end style and affordable pricing, <span class="highlight">Atelier Co.</span> ensures that every student—regardless of their budget—steps out feeling confident, empowered, and unforgettable.</p>
+
+        <p>Whether you’re looking for a sleek escort, a cinematic ride, or the perfect glow-up, we are here to make sure your final high school chapter starts with a standing ovation.</p>
+
+        <div class="footer-line"></div>
+
+        <section class="features">
+            <h3>Why choose us?</h3>
+            <ul>
+                <li>
+                    <strong>The Full Suite</strong>
+                    Everything from your fit to your wheels in one place.
+                </li>
+                <li>
+                    <strong>Affordability First</strong>
+                    High-fashion looks that don't break the bank.
+                </li>
+                <li>
+                    <strong>Curated Quality</strong>
+                    We only partner with the best in the business to ensure you look your best.
+                </li>
+            </ul>
+        </section>
+    </main>
+
+</body>
+</html>
