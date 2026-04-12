@@ -9,8 +9,6 @@
 
      //form structure
     form.innerHTML= `
-      <h2>Book NOW</h2>
-
     <label>Name:</label><br>
     <input type="text" id="name"required><br>
 

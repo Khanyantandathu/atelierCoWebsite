@@ -6,22 +6,21 @@
 body{
     background-color: black;
     color: white;
-    font-family: Montserrat' sans-serif;
-    line-height 1.6;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
 }
-.contact-us-section{
+.Book-Now-section ::before{
     position: relative;
-    overflow:hidden;/* prevents blur from spilling out*/
-    padding: 40px
-    color white ;
-
+    overflow: hidden; /* prevents blur from spilling out */
+    padding: 40px;
+    color: white;
 }
-/*blurred background image*/
-.contact-us-section::before {
-    content:"";
+/* blurred background image */
+.Book-Now-section::before {
+    content: "";
     position: absolute;
     top: 0;
-    left:0;
+    left: 0;
     width: 100%;
     height: 100%;
     background-image: url(html.png.jpeg);
@@ -30,6 +29,38 @@ body{
     filter: blur(10px); /* <-- the blur effect */
     z-index: -1; /* move behind the content */
     transform: scale(1.1); /* fixes blur edges */
+
+}
+#Book-Now-form {
+    border: 1px solid gold;
+    padding: 20px;
+    max-width:400px ;
+    font-family:arial;
+    
+}
+#Book-Now-form input,#Book-Now-form textarea {
+    width:100% ;
+    margin: bottom 10px; ;
+
+}
+#BOOK-Now-form button #Book-Now-form button {
+    background-color: white;
+    color: black;
+    padding:10px 20px;
+    border: none;
+    cursor: pointer ;
+}
+
+.Book-Now-section header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.Book-Now-section h1 {
+    color: gold;
+    font-size: 2rem;
 }
 
 .contact-flex {
@@ -44,7 +75,6 @@ body{
     margin: 10px;
     color:goldenrod;
 }
-
 .back-btn{
     background-color: black;
     color: gold;
